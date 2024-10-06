@@ -6,13 +6,14 @@
 
 # Set the input HTML file and the output CSV file
 input_file="tmp.html"
-output_file="table.csv"
+date=`date '+%m_%d'`
+output_file="table_"$date".csv"
 [ -f ./$output_file ] && mv ./$output_file "./${output_file}.old"
 rm ./$output_file
 
 # the size of the table on the webiste
 # it has to be adjusted automatically
-N=481
+N=505
 
 for j in $(seq 1 $N);
 do
